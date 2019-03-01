@@ -1,9 +1,6 @@
-[![](https://img.shields.io/badge/OS-Unix-blue.svg?longCache=True)]()
 [![](https://img.shields.io/pypi/v/repo-config.svg?maxAge=3600)](https://pypi.org/project/repo-config/)
 [![](https://img.shields.io/npm/v/repo-config.svg?maxAge=3600)](https://www.npmjs.com/package/repo-config)
 [![Travis](https://api.travis-ci.org/looking-for-a-job/repo-config.svg?branch=master)](https://travis-ci.org/looking-for-a-job/repo-config/)
-
-<b>store repo config in dotfiles</b>
 
 #### Install
 ```bash
@@ -52,11 +49,11 @@ run `repo-config COMMAND --help` for more infos
 #### Examples
 ```bash
 $ cd path/to/repo
-$ repo-config init
+$ repo-config init .
 $ ... # generate and edit config/tmp files
-$ repo-config save
+$ repo-config save .
 .config/ saved to ~/.config/repo-config/owner/repo
-$ repo-config load
+$ repo-config load .
 .config/ loaded from ~/.config/repo-config/owner/repo
 ```
 
@@ -69,12 +66,8 @@ $ ln -fs path/to/backup-repository/repo-config ~/.config/repo-config
 
 ##### save/load multiple repos config
 ```bash
-$ find ~/git -type d -name ".config" -maxdepth 3 -execdir repo-config save \;
-```
-
-using **execdir** package ([pypi.org/project/execdir/](https://pypi.org/project/execdir/) or [npmjs.com/package/execdir/](https://pypi.org/project/execdir/))
-```bash
-$ execdir run all repo-config save
+$ find ~/git -type d -maxdepth 1 -exec repo-config save {} \;
+$ find ~/git -type d -maxdepth 1 -exec repo-config load {} \;
 ```
 
 <p align="center"><a href="https://pypi.org/project/readme-md/">readme-md</a> - README.md generator</p>

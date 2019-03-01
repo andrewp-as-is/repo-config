@@ -3,13 +3,13 @@
 
 usage() {
     cat <<EOF 1>&2
-usage: $(basename $0)
+usage: $(basename $0) path
 EOF
     [[ $1 == "-h" ]] || [[ $1 == "--help" ]]; exit
 }
 
 [[ $1 == "-h" ]] || [[ $1 == "--help" ]] && usage "$@"
-[[ $# != 0 ]] && usage
+[[ $# != 1 ]] && usage
 
 REPO_CONFIG_FOLDER="${REPO_CONFIG_FOLDER-.config}"
 
