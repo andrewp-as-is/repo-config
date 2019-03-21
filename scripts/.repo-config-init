@@ -11,7 +11,7 @@ EOF
 [[ $1 == "-h" ]] || [[ $1 == "--help" ]] && usage "$@"
 [[ $# != 1 ]] && usage
 
-REPO_CONFIG_FOLDER="${REPO_CONFIG_FOLDER-.config}"
+REPO_CONFIG_DIR="${REPO_CONFIG_DIR-.config}"
 
-! [ -e "$REPO_CONFIG_FOLDER" ] && { mkdir "$REPO_CONFIG_FOLDER" || exit; };:
+! [ -e "$REPO_CONFIG_DIR" ] && { mkdir "$REPO_CONFIG_DIR" || exit; };:
 # todo: init.sh

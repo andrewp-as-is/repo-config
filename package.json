@@ -1,6 +1,6 @@
 {
   "name": "repo-config",
-  "version": "2019.03.01",
+  "version": "2019.03.21",
   "description": "store repo config in dotfiles",
   "keywords": [
     "repo",

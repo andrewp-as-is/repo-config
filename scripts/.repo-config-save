@@ -14,7 +14,7 @@ EOF
 cd "$1" || exit
 
 XDG_CONFIG_HOME="${XDG_CONFIG_HOME-$HOME/.config}"
-REPO_CONFIGF_DOTFILES="${REPO_CONFIGF_DOTFILES-$XDG_CONFIG_HOME/repo-config}"
+REPO_CONFIG_HOME="${REPO_CONFIG_HOME-$XDG_CONFIG_HOME/repo-config}"
 REPO_CONFIG_DIR="${REPO_CONFIG_DIR-.config}"
 
 ! [ -e .git ] && echo "SKIP ($PWD): Not a git repository" && exit
@@ -22,7 +22,7 @@ REPO_CONFIG_DIR="${REPO_CONFIG_DIR-.config}"
 fullname="$(repo-config fullname "$@")" || exit
 [[ -z "$fullname" ]] && echo "SKIP ($PWD): git remote not defined" && exit
 
-dotfiles_config="$REPO_CONFIGF_DOTFILES/$fullname"
+dotfiles_config="$REPO_CONFIG_HOME/$fullname"
 repo_config=$PWD/$REPO_CONFIG_DIR
 
 ! [ -e "${dotfiles_config%/*}" ] && { mkdir -p "${dotfiles_config%/*}" || exit; }

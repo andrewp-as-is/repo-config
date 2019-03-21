@@ -1,8 +1,13 @@
+<!--
+https://pypi.org/project/readme-generator/
+-->
+
+[![](https://img.shields.io/badge/OS-Unix-blue.svg?longCache=True)]()
 [![](https://img.shields.io/pypi/v/repo-config.svg?maxAge=3600)](https://pypi.org/project/repo-config/)
 [![](https://img.shields.io/npm/v/repo-config.svg?maxAge=3600)](https://www.npmjs.com/package/repo-config)
 [![Travis](https://api.travis-ci.org/looking-for-a-job/repo-config.svg?branch=master)](https://travis-ci.org/looking-for-a-job/repo-config/)
 
-#### Install
+#### Installation
 ```bash
 $ [sudo] npm i -g repo-config
 ```
@@ -30,7 +35,7 @@ $ echo "/.config" >> ~/.gitignore
 
 optional. environment variables:
 ```bash
-$ export REPO_CONFIG_DOTFILES=~/.config/repo-config # $XDG_CONFIG_HOME/repo-config by default
+$ export REPO_CONFIG_HOME=~/.config/repo-config     # $XDG_CONFIG_HOME/repo-config by default
 $ export REPO_CONFIG_DIR=.config                    # .config by default
 ```
 
@@ -70,4 +75,6 @@ $ find ~/git -type d -maxdepth 1 -exec repo-config save {} \;
 $ find ~/git -type d -maxdepth 1 -exec repo-config load {} \;
 ```
 
-<p align="center"><a href="https://pypi.org/project/readme-md/">readme-md</a> - README.md generator</p>
+<p align="center">
+    <a href="https://pypi.org/project/readme-generator/">readme-generator</a>
+</p>
