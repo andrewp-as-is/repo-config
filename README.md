@@ -1,5 +1,6 @@
 <!--
 https://pypi.org/project/readme-generator/
+https://pypi.org/project/python-readme-generator/
 -->
 
 [![](https://img.shields.io/badge/OS-Unix-blue.svg?longCache=True)]()
@@ -39,7 +40,7 @@ $ export REPO_CONFIG_HOME=~/.config/repo-config     # $XDG_CONFIG_HOME/repo-conf
 $ export REPO_CONFIG_DIR=.config                    # .config by default
 ```
 
-#### CLI
+#### Scripts usage
 ```bash
 usage: repo-config command [args]
 
@@ -76,5 +77,5 @@ $ find ~/git -type d -maxdepth 1 -exec repo-config load {} \;
 ```
 
 <p align="center">
-    <a href="https://pypi.org/project/readme-generator/">readme-generator</a>
+    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
 </p>
